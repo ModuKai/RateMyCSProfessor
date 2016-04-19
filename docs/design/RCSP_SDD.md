@@ -26,7 +26,7 @@
 > - [Constraints](#intro_constraints)
 
 <p>
-  The purpose of this software design document is to outline and carefully describe different aspects of the [RateMyCSProfessor][RCSP-Repo] website through a developmental lens, primarily for developmental purposes. However it may also be used as not only a primer for anyone newly involved in the project, but as an updated reference to the current design model. Any API-related investigations are irrelevant here.
+  The purpose of this software design document is to outline and carefully describe different aspects of the RateMyCSProfessor website through a developmental lens, primarily for developmental purposes. However it may also be used as not only a primer for anyone newly involved in the project, but as an updated reference to the current design model. Any API-related investigations are irrelevant here.
 </p>
 <p>
   Design decisions may change, and so there will consequently occur changes & updates to this document at any given time, with a revision history kept.
@@ -38,7 +38,7 @@
 - 1.1 Goals & Objectives
 
 <p>
-  The [RateMyCSProfessor][RCSP-Repo] website is meant to be a domain-specific rating & feedback website in which both students and instructors may participate.
+  The RateMyCSProfessor website is meant to be a domain-specific rating & feedback website in which both students and instructors may participate.
 </p>
 <p>
   It differs from other instructor rating websites in that it allows a rater to go more in depth regarding his or her experience with the instructor, by virtue of domain-specificity. Whereas other websites are tailored to a general audience, where the rating template is too simplistic and often gives very limited useful information to curious students, a domain-specific rating website is specially capable of allowing a larger amount of relevant data to be inputted in a sensible way and consequently shared with students searching for exactly that type of detailed information.
@@ -47,27 +47,28 @@
   We hope to build a rating template that serves raters easily and, most importantly, as fully as possible. Students read other students ratings, and hopefully benefit from each other when a reader becomes a rater. In this way a community of raters begins to form.
 </p>
 <p>
-  One fundamental aspect of the instructor rating environment is that the instructor is not necessarily left out. In [RateMyCSProfessor][RCSP-Repo], willing instructors will be provided the means to communicate with raters of their choosing. What essentially happens is there begins to form an organized way for instructors to receive feedback from students as well as respond to that feedback publically.
+  One fundamental aspect of the instructor rating environment is that the instructor is not necessarily left out. In RateMyCSProfessor, willing instructors will be provided the means to communicate with raters of their choosing. What essentially happens is there begins to form an organized way for instructors to receive feedback from students as well as respond to that feedback publically.
 </p>
 <p>
-  [RateMyCSProfessor][RCSP-Repo], in this way, becomes a communication board between instructors looking to improve and refine their teaching skills and standards, and students wanting to share with and inform other students of their experiences, as well as provide feedback to the instructors in question.
+  RateMyCSProfessor, in this way, becomes a communication board between instructors looking to improve and refine their teaching skills and standards, and students wanting to share with and inform other students of their experiences, as well as provide feedback to the instructors in question.
 </p>
 
 ---
 
 <a name="intro_scope"></a>
 - 1.2 Scope
+
 > - [Profiles](#intro_scope_profiles)
 > - [Ratings](#intro_scope_ratings)
 
-Here we will discuss the features we plan on covering in this or later versions of [RCSP][RCSP-Repo].
+Here we will discuss the features we plan on covering in this or later versions of RCSP.
 
 ---
 
 <a name="intro_scope_profiles"></a>
 - 1.2.1 <i>Profiles</i>
 
-<p>In general, profiles may be highly customizable pages (which are also open to inspection by [RCSP][RCSP-Repo] staff to prevent inappropriateness) belonging to a single user. The medium through which customizability is installed into each profile may be an interface which allows the writing of markdown and stylesheet code, which is dealt with accordingly, returning feedback to the user regarding the status of their input.</p>
+<p>In general, profiles may be highly customizable pages (which are also open to inspection by RCSP staff to prevent inappropriateness) belonging to a single user. The medium through which customizability is installed into each profile may be an interface which allows the writing of markdown and stylesheet code, which is dealt with accordingly, returning feedback to the user regarding the status of their input.</p>
 
 <table>
   <tr>
