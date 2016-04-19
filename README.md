@@ -10,7 +10,7 @@ ____________________________________
 
 <table>
   <tr>
-    <td>__Developers__</td>
+    <td> <b>Developers</b> </td>
   </tr>
   <tr>
     <td>Uman Shahzad</td>
