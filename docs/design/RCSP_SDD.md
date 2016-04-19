@@ -42,13 +42,16 @@
   The RateMyCSProfessor website is meant to be a domain-specific rating & feedback website in which both students and instructors may participate.
 </p>
 <p>
-  It differs from other instructor rating websites in that it allows a rater to go more in depth regarding his or her experience with the instructor, by virtue of domain-specificity. Whereas other websites are tailored to a general audience, where the rating template is too simplistic and often gives very limited useful information to curious students, a domain-specific rating website is specially capable of allowing a larger amount of relevant data to be inputted in a sensible way and consequently shared with students searching for exactly that type of detailed information.
+  It differs from other rating websites in that it allows a rater to go more in depth regarding his or her experience with the instructor, by virtue of domain-specificity. Whereas other websites are tailored to a general audience, where the rating template is too simplistic and often gives very limited useful information to curious students, a domain-specific rating website is specially capable of allowing a larger amount of relevant data to be inputted in a user-friendly way and consequently shared with students searching for exactly that type of specific information.
 </p>
 <p>
-  We hope to build a rating template that serves raters easily and, most importantly, as fully as possible. Students read other students ratings, and hopefully benefit from each other when a reader becomes a rater. In this way a community of raters begins to form.
+  It further distinguishes itself in terms of its profile and rating model; there is a tremendous amount of flexibility in store for users unseen at other rating websites, domain-specific or not.
 </p>
 <p>
-  One fundamental aspect of the instructor rating environment is that the instructor is not necessarily left out. In RateMyCSProfessor, willing instructors will be provided the means to communicate with raters of their choosing. What essentially happens is there begins to form an organized way for instructors to receive feedback from students as well as respond to that feedback publicly.
+  We hope to build a rating template that is highly user-friendly and, most importantly, as complete as possible in the sense of domain-specific information, with potentially optional inputs. Students can read other students ratings, and hopefully benefit mutually when a reader becomes a rater.
+</p>
+<p>
+  One fundamental aspect of the rating environment planned at RCSP is that the instructor is not a victim. In RateMyCSProfessor, willing instructors will be provided the means to communicate with raters of their choosing, even capable of rating students with approval. What essentially happens is there begins to form an organized way for instructors to receive feedback from students as well as respond to that feedback publicly. Students may build prestigious profiles through objective and useful feedback, as well as recommendation-letter-like ratings from instructors.
 </p>
 <p>
   RateMyCSProfessor, in this way, becomes a communication board between instructors looking to improve and refine their teaching skills and standards, and students wanting to share with and inform other students of their experiences, as well as provide feedback to the instructors in question.
@@ -67,7 +70,7 @@ Here we will discuss the features we plan on covering in this or later versions 
 <a name="intro_scope_profiles"></a>
 - 1.2.1 <i>Profiles</i>
 
-<p>In general, profiles may be highly customizable pages (which are also open to inspection by RCSP staff to prevent inappropriateness) belonging to a single user. The medium through which customizability is installed into each profile may be an interface which allows the writing of markdown and stylesheet code, which is dealt with accordingly, returning feedback to the user regarding the status of their input.</p>
+<p>In general, profiles may be highly customizable pages (which are also open to inspection by RCSP staff to prevent inappropriateness) belonging to a single user. The medium through which customizability is installed into each profile may be an interface which allows the writing of markdown and stylesheet code, which is dealt with accordingly by our processing and storage components, returning feedback to the user regarding the status of their input.</p>
 
 <table>
   <tr>
@@ -78,9 +81,9 @@ Here we will discuss the features we plan on covering in this or later versions 
   <tr>
     <td>Student Profile</td>
     <td>
-      <p>Students share a probably irrational fear that sharing their real identity on rating websites puts them in danger of receiving biased grades by the same or other professors.</p>
+      <p>Students share a probably irrational fear that sharing their real identity on rating websites puts them in danger of receiving biased grades by professors in the loop.</p>
 
-      <p>Our student profile feature will differ from the usual type to accomodate this widespread belief so that it is impossible for one's profile to be referenced from one of their individual ratings until that rating has aged at least 6 months.</p>
+      <p>Our student profile feature will differ from the usual type to accomodate for this widespread belief; it is made impossible for one's profile to be referenced from one of their individual ratings until that rating has aged at least 6 months.</p>
 
       <p>Student profiles will consist of many of the usual details held in any typical user profile, along with references to ratings they've posted which are at least 6 months old.</p>
     </td>
