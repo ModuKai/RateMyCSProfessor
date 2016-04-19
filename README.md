@@ -1,10 +1,8 @@
-## __Currently under development.__
-
-____________________________________
+## <a href="docs/design/RCSP_SDD.md">__Currently under development.__</a>
 
 ### RateMyCSProfessor
 
-Website where CS and non-CS students alike can come and share their experiences with Computer Science professors.
+A website where CS and non-CS students alike can come and share their experiences with Computer Science professors.
 
 ____________________________________
 
