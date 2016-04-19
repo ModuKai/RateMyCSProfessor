@@ -1,8 +1,9 @@
 # [Rate My CS Professor][RCSP-Repo]
 
 ## Software Design Documentation
-##### Version: 1.0
-##### Date: 04-19-2016
+##### Product Version: 1.0
+##### Document Version: 1.0
+##### Date: 04-xx-2016
 
 ---
 
@@ -29,7 +30,7 @@
   The purpose of this software design document is to outline and carefully describe different aspects of the RateMyCSProfessor website through a developmental lens, primarily for developmental purposes. However it may also be used as not only a primer for anyone newly involved in the project, but as an updated reference to the current design model. Any API-related investigations are irrelevant here.
 </p>
 <p>
-  Design decisions may change, and so there will consequently occur changes & updates to this document at any given time, with a revision history kept.
+  Design decisions may change with solution iterations, and so there will consequently occur changes & updates to this document, with a revision history kept in the appendices.
 </p>
 
 ---
@@ -47,7 +48,7 @@
   We hope to build a rating template that serves raters easily and, most importantly, as fully as possible. Students read other students ratings, and hopefully benefit from each other when a reader becomes a rater. In this way a community of raters begins to form.
 </p>
 <p>
-  One fundamental aspect of the instructor rating environment is that the instructor is not necessarily left out. In RateMyCSProfessor, willing instructors will be provided the means to communicate with raters of their choosing. What essentially happens is there begins to form an organized way for instructors to receive feedback from students as well as respond to that feedback publically.
+  One fundamental aspect of the instructor rating environment is that the instructor is not necessarily left out. In RateMyCSProfessor, willing instructors will be provided the means to communicate with raters of their choosing. What essentially happens is there begins to form an organized way for instructors to receive feedback from students as well as respond to that feedback publicly.
 </p>
 <p>
   RateMyCSProfessor, in this way, becomes a communication board between instructors looking to improve and refine their teaching skills and standards, and students wanting to share with and inform other students of their experiences, as well as provide feedback to the instructors in question.
@@ -62,8 +63,6 @@
 > - [Ratings](#intro_scope_ratings)
 
 Here we will discuss the features we plan on covering in this or later versions of RCSP.
-
----
 
 <a name="intro_scope_profiles"></a>
 - 1.2.1 <i>Profiles</i>
@@ -96,8 +95,6 @@ Here we will discuss the features we plan on covering in this or later versions 
     </td>
   </tr>
 </table>
-
----
 
 <a name="intro_scope_ratings"></a>
 - 1.2.2 <i>Ratings</i>
@@ -301,6 +298,7 @@ Here we will discuss the features we plan on covering in this or later versions 
 ## 8. Appendices
 > - [Definitions](#appendices_definitions)
 > - [Errata](#appendices_errata)
+> - [Revision History](#appendices_revision_history)
 
 ---
 
@@ -311,6 +309,13 @@ Here we will discuss the features we plan on covering in this or later versions 
 
 <a name="appendices_errata"></a>
 - 8.2 Errata
+
+---
+
+<a name="appendices_revision_history"></a>
+- 8.3 Revision History
+
+Note that all revisions are tracked once Version 1.0 of the documentation is released.
 
 
 [RCSP-Repo]: https://github.com/ModuKai/RateMyCSProfessor "Rate My CS Professor Repository"
