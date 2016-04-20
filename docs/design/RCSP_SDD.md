@@ -1,4 +1,4 @@
-# [Rate My CS Professor][RCSP-Repo]
+# [Rate My CS Professor][RCSP_Repo]
 
 ## Software Design Documentation
 ##### Product Version: 1.0
@@ -9,11 +9,11 @@
 
 ## Table of Contents
 > 1. [Introduction](#introduction)
-> 2. [Use Cases](#use-cases)
-> 3. [Design Overview](#design-overview)
-> 4. [User Interface Design](#user-interface-design)
-> 5. [Architectural & Components Design](#arch-and-comp-design)
-> 6. [Data Model](#data-model)
+> 2. [Use Cases](#use_cases)
+> 3. [Design Overview](#design_overview)
+> 4. [User Interface Design](#user_interface_design)
+> 5. [Architectural & Components Design](#arch_and_comp_design)
+> 6. [Data Model](#data_model)
 > 7. [Testing](#testing)
 > 8. [Appendices](#appendices)
 
@@ -21,10 +21,10 @@
 
 <a name="introduction"></a>
 ## 1. Introduction
-> - [Goals & Objectives](#intro_goals-and-objectives)
-> - [Scope](#intro_scope)
-> - [Context](#intro_context)
-> - [Constraints](#intro_constraints)
+> - [Goals & Objectives](#intro-goals_and_objectives)
+> - [Scope](#intro-scope)
+> - [Context](#intro-context)
+> - [Constraints](#intro-constraints)
 
 <p>
   The purpose of this software design document is to outline and carefully describe different aspects of the RateMyCSProfessor website through a developmental lens, primarily for developmental purposes. However it may also be used as not only a primer for anyone newly involved in the project, but as an updated reference to the current design model. Any API-related investigations are irrelevant here.
@@ -35,7 +35,7 @@
 
 ---
 
-<a name="intro_goals-and-objectives"></a>
+<a name="intro-goals_and_objectives"></a>
 - 1.1 Goals & Objectives
 
 <p>
@@ -59,7 +59,7 @@
 
 ---
 
-<a name="intro_scope"></a>
+<a name="intro-scope"></a>
 - 1.2 Scope
 
 > - [Profiles](#intro_scope_profiles)
@@ -67,10 +67,10 @@
 
 Here we will discuss the features we plan on covering in this or later versions of RCSP.
 
-<a name="intro_scope_profiles"></a>
+<a name="intro-scope-profiles"></a>
 - 1.2.1 <i>Profiles</i>
 
-<p>In general, profiles may be highly customizable pages (which are also open to inspection by RCSP staff to prevent inappropriateness) belonging to a single user. The medium through which customizability is installed into each profile may be an interface which allows the writing of markdown and stylesheet code, which is dealt with accordingly by our processing and storage components, returning feedback to the user regarding the status of their input.</p>
+<p>In general, profiles may be highly customizable web pages (which are necessarily open to inspection by RCSP staff to prevent inappropriateness) belonging to a single user. The medium through which high customizability is installed for each profile may be an interface which allows the writing of markdown and stylesheet code, which is dealt with accordingly by our processing and storage components, returning feedback to the user regarding the status of their input.</p>
 
 <table>
   <tr>
@@ -83,7 +83,7 @@ Here we will discuss the features we plan on covering in this or later versions 
     <td>
       <p>Students share a probably irrational fear that sharing their real identity on rating websites puts them in danger of receiving biased grades by professors in the loop.</p>
 
-      <p>Our student profile feature will differ from the usual type to accomodate for this widespread belief; it is made impossible for one's profile to be referenced from one of their individual ratings until that rating has aged at least 6 months.</p>
+      <p>Our student profile feature will differ from the usual type to accommodate for this widespread belief; it is made impossible for one's profile to be referenced from one of their individual ratings until that rating has aged at least 6 months.</p>
 
       <p>Student profiles will consist of many of the usual details held in any typical user profile, along with references to ratings they've posted which are at least 6 months old.</p>
     </td>
@@ -99,8 +99,10 @@ Here we will discuss the features we plan on covering in this or later versions 
   </tr>
 </table>
 
-<a name="intro_scope_ratings"></a>
+<a name="intro-scope-ratings"></a>
 - 1.2.2 <i>Ratings</i>
+
+<p>Every rating contains a template the rater must abide by, with potentially optional inputs. All ratings are first forwarded to the RCSP backend to evaluate appropriateness in terms of language. This technique can also help filter spam. Individual ratings will have the property of being "liked" or "disliked" by others, as well as commented on.</p>
 
 <table>
   <tr>
@@ -111,214 +113,333 @@ Here we will discuss the features we plan on covering in this or later versions 
   <tr>
     <td>Professor Rating</td>
     <td>
-
+      The key feature of RSCP is the professor rating. Student profiles may be allowed to comment on professors, with a template that goes over a wide range of aspects profiling the student's experience and feedback.
     </td>
   </tr>
 
   <tr>
     <td>Class Rating</td>
     <td>
-
+      In some cases, a student may seek to focus on a particular class and the material covered rather than the professor. We allow for this, and so classes associated with their title and host institution will be viewable with respective ratings. A <i>class</i> and a <i>professor</i> do not inherently differ except that there is no such thing as a class profile. Raters may be optionally allowed to "forward" their class rating to the professor that taught it, effectively making the rating appear and exist in the record of both that class page and the professor's page.
     </td>
   </tr>
 
   <tr>
     <td>Student Rating</td>
     <td>
+      At RCSP we do not bias against the professor, but at the same time recognize that it is not appropriate for a professor to publicly give negative comments to a student. So, professors are allowed to rate a student upon that student's private approval through the website, in which case the rating may be made either public or private by the student.
+    </td>
+  </tr>
 
+  <tr>
+    <td>Rating Likes & Dislikes
+    <td>
+      Every rating will come with a like/dislike button (or some other similar dichotomy) which other users can click on to compactly share their view on the rating.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Rating Comments</td>
+    <td>
+      Any rating that has become public is open to comments from other users, including the rater. Comments share properties that ratings do: they can also be liked and disliked, and commented on, but nesting of comments will have an upper bound.
     </td>
   </tr>
 </table>
 
 ---
 
-<a name="intro_context"></a>
+<a name="intro-context"></a>
 - 1.3 Context
 
+<p>The current iteration of RCSP will be website based only. Plans for an Android application are not in the air, but part of the team is knowledgeable enough in the Android environment that such an idea is not far-fetched whatsoever.</p>
+<p>For now, however, as much effort and development time as possible will be put into the website part of the product.</p>
+
 ---
 
-<a name="intro_constraints"></a>
+<a name="intro-constraints"></a>
 - 1.4 Constraints
 
+<p>There are several constraints the development team will face.</p>
+<p>For one, the team itself is not very large. At the time of writing 2 people are knowledgeable enough in web frameworks and languages necessary to at least get started on the product, but not to complete it.</p>
+<p>As for knowledge, this is the (current) team's first web solution and so they still need to get acquainted with frameworks which'll make the code base more modular, as well as the possibly very many 'best practices' for web development and existing security protocols.</p>
+
 ---
 
-<a name="use-cases"></a>
+<a name="use_cases"></a>
 ## 2. Use Cases
-> - [Actors](#uc_actors)
+> - [Login](#uc-login)
+> - [Create Account](#uc-create_account)
 
-<a name="uc_actors"></a>
-- 1.1 Actors
+Here we follow a use case template to detail several different use cases within RCSP. The several use cases are described below, and we go into detail in their respective sections.
+
+<table>
+  <tr>
+    <td>USE CASE</td>
+    <td>DESCRIPTION</td>
+  </tr>
+
+  <tr>
+    <td>Login</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Create Account</td>
+    <td></td>
+  </tr>
+</table>
 
 ---
 
-<a name="design-overview"></a>
+<a name="uc-login"></a>
+- 2.1 Login
+
+<table>
+  <tr>
+    <td>FACTORS</td>
+    <td>DESCRIPTION</td>
+  </tr>
+
+  <tr>
+    <td>Actors</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Priority</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Precondition</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>User Interface</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Scenarios</td>
+    <td></td>
+  </tr>
+</table>
+
+---
+
+<a name="uc-create_account"></a>
+- 2.2 Create Account
+
+<table>
+  <tr>
+    <td>FACTORS</td>
+    <td>DESCRIPTION</td>
+  </tr>
+
+  <tr>
+    <td>Actors</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Priority</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Precondition</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Postcondition</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>User Interface</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Scenarios</td>
+    <td></td>
+  </tr>
+</table>
+
+---
+
+<a name="design_overview"></a>
 ## 3. Design Overview
-> - [Design Phases](#do_design-phases)
-> - [Guiding Principles](#do_guiding-principles)
-> - [Design Patterns](#do_design-patterns)
-> - [Coding Style](#do_coding-style)
+> - [Design Phases](#do-design_phases)
+> - [Guiding Principles](#do-guiding_principles)
+> - [Design Patterns](#do-design_patterns)
+> - [Coding Style](#do-coding_style)
 
 ---
 
-<a name="do_design-phases"></a>
+<a name="do-design_phases"></a>
 - 3.1 Design Phases
 
 ---
 
-<a name="do_guiding-principles"></a>
+<a name="do-guiding_principles"></a>
 - 3.2 Guiding Principles
 
 ---
 
-<a name="do_design-patterns"></a>
+<a name="do-design_patterns"></a>
 - 3.3 Design Patterns
 
 ---
 
-<a name="do_coding-style"></a>
+<a name="do-coding_style"></a>
 - 3.4 Coding Style
 
 ---
 
-<a name="user-interface-design"></a>
+<a name="user_interface_design"></a>
 ## 4. User Interface Design
-> - [Prototypes](#uid_prototypes)
-> - [Justifications](#uid_justifications)
-> - [Tradeoffs](#uid_perceived-tradeoffs)
-> - [Discussion](#uid_discussion)
+> - [Prototypes](#uid-prototypes)
+> - [Justifications](#uid-justifications)
+> - [Tradeoffs](#uid-perceived_tradeoffs)
+> - [Discussion](#uid-discussion)
 
 ---
 
-<a name="uid_prototypes"></a>
+<a name="uid-prototypes"></a>
 - 4.1 Prototypes
 
 ---
 
-<a name="uid_justifications"></a>
+<a name="uid-justifications"></a>
 - 4.2 Justifications
 
 ---
 
-<a name="uid_perceived-tradeoffs"></a>
+<a name="uid-perceived_tradeoffs"></a>
 - 4.3 Tradeoffs
 
 ---
 
-<a name="uid_discussion"></a>
+<a name="uid-discussion"></a>
 - 4.4 Discussion
 
 ---
 
-<a name="arch-and-comp-design"></a>
+<a name="arch_and_comp_design"></a>
 ## 5. Architectural & Components Design
-> - [MVC](#acd_mvc)
-> - [Components](#acd_components)
-> - [Hosts](#acd_hosts)
-> - [Discussion](#acd_discussion)
+> - [MVC](#acd-mvc)
+> - [Components](#acd-components)
+> - [Hosts](#acd-hosts)
+> - [Discussion](#acd-discussion)
 
 ---
 
-<a name="acd_mvc"></a>
+<a name="acd-mvc"></a>
 - 5.1 MVC
 
-> - [Model](#acd_mvc_model)
-> - [View](#acd_mvc_view)
-> - [Controller](#acd_mvc_controller)
+> - [Model](#acd-mvc-model)
+> - [View](#acd-mvc-view)
+> - [Controller](#acd-mvc-controller)
 
 ---
 
-<a name="acd_mvc_model"></a>
+<a name="acd-mvc-model"></a>
 - 5.1.1 <i>Model</i>
 
 ---
 
-<a name="acd_mvc_view"></a>
+<a name="acd-mvc-view"></a>
 - 5.1.2 <i>View</i>
 
 ---
 
-<a name="acd_mvc_controller"></a>
+<a name="acd-mvc-controller"></a>
 - 5.1.3 <i>Controller</i>
 
 ---
 
-<a name="acd_components"></a>
+<a name="acd-components"></a>
 - 5.2 Components
 
 ---
 
-<a name="acd_hosts"></a>
+<a name="acd-hosts"></a>
 - 5.3 Hosts
 
 ---
 
-<a name="acd_discussion"></a>
+<a name="acd-discussion"></a>
 - 5.4 Discussion
 
 ---
 
-<a name="data-model"></a>
+<a name="data_model"></a>
 ## 6. Data Model
-> - [Prototype Tables](#dm_prototype-tables)
-> - [JSON Specification](#dm_json-spec)
-> - [Database Specification](#dm_database-spec)
-> - [Discussion](#dm_discussion)
+> - [Prototype Tables](#dm-prototype_tables)
+> - [JSON Specification](#dm-json_spec)
+> - [Database Specification](#dm-database_spec)
+> - [Discussion](#dm-discussion)
 
 ---
 
-<a name="dm_prototype-tables"></a>
+<a name="dm-prototype_tables"></a>
 - 6.1 Prototype Tables
 
 ---
 
-<a name="dm_json-spec"></a>
+<a name="dm-json_spec"></a>
 - 6.2 JSON Specification
 
 ---
 
-<a name="dm_database-spec"></a>
+<a name="dm-database_spec"></a>
 - 6.3 Database Specification
 
 ---
 
-<a name="dm_discussion"></a>
+<a name="dm-discussion"></a>
 - 6.4 Discussion
 
 ---
 
 <a name="testing"></a>
 ## 7. Testing
-> - [Protocols](#testing_protocols)
+> - [Protocols](#testing-protocols)
 
 ---
 
-<a name="testing_protocols"></a>
+<a name="testing-protocols"></a>
 - 7.1 Protocols
 
 ---
 
 <a name="appendices"></a>
 ## 8. Appendices
-> - [Definitions](#appendices_definitions)
-> - [Errata](#appendices_errata)
-> - [Revision History](#appendices_revision_history)
+> - [Definitions](#appendices-definitions)
+> - [Errata](#appendices-errata)
+> - [Revision History](#appendices-revision_history)
 
 ---
 
-<a name="appendices_definitions"></a>
+<a name="appendices-definitions"></a>
 - 8.1 Definitions
 
 ---
 
-<a name="appendices_errata"></a>
+<a name="appendices-errata"></a>
 - 8.2 Errata
 
 ---
 
-<a name="appendices_revision_history"></a>
+<a name="appendices-revision_history"></a>
 - 8.3 Revision History
 
+<p>
 Note that all revisions are tracked once Version 1.0 of the documentation is released.
+</p>
 
 
-[RCSP-Repo]: https://github.com/ModuKai/RateMyCSProfessor "Rate My CS Professor Repository"
+[RCSP_Repo]: https://github.com/ModuKai/RateMyCSProfessor "Rate My CS Professor Repository"
