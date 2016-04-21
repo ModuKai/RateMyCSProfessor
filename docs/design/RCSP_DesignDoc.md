@@ -120,7 +120,7 @@ Here we will discuss the features we plan on covering in this or later versions 
   <tr>
     <td>Class Rating</td>
     <td>
-      In some cases, a student may seek to focus on a particular class and the material covered rather than the professor. We allow for this, and so classes associated with their title and host institution will be viewable with respective ratings. A <i>class</i> and a <i>professor</i> do not inherently differ except that there is no such thing as a class profile. Raters may be optionally allowed to "forward" their class rating to the professor that taught it, effectively making the rating appear and exist in the record of both that class page and the professor's page.
+      In some cases, a student may seek to focus on a particular class and the material covered rather than the professor. We allow for this, and so classes, with their title and host institution will be viewable on a page with their respective ratings. A <i>class</i> and a <i>professor</i> do not inherently differ except that there is no such thing as a class profile. Raters may be optionally allowed to "forward" their class rating to the professor that taught it, effectively making the rating appear and exist in the record of both that class page and the professor's page, respecting our timed anonymity principle on both ends.
     </td>
   </tr>
 
@@ -170,7 +170,11 @@ Here we will discuss the features we plan on covering in this or later versions 
 > - [Login](#uc-login)
 > - [Create Account](#uc-create_account)
 
-Here we follow a use case template to detail several different use cases within RCSP. The several use cases are described below, and we go into detail in their respective sections.
+Here we follow a use case template to detail several different use cases within RCSP. The use cases are described below, and we go into detail in their respective sections.
+
+
+Gregory Muthu
+516-364-5151
 
 <table>
   <tr>
