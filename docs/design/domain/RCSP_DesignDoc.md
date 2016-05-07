@@ -12,7 +12,7 @@
 > 2. [Use Cases](#use_cases)
 > 3. [Design Overview](#design_overview)
 > 4. [User Interface Design](#user_interface_design)
-> 5. [Architectural & Components Design](#arch_and_comp_design)
+> 5. [Components](#components)
 > 6. [Data Model](#data_model)
 > 7. [Testing](#testing)
 > 8. [Appendices](#appendices)
@@ -27,7 +27,7 @@
 > - [Constraints](#intro-constraints)
 
 <p>
-  The purpose of this software design document is to outline and carefully describe different aspects of the RateMyCSProfessor website through a developmental lens, primarily for developmental purposes. However it may also be used as not only a primer for anyone newly involved in the project, but as an updated reference to the current design model. Any API-related investigations are irrelevant here.
+  The purpose of this software design document is to outline and carefully describe different aspects of the RateMyCSProfessor website through a developmental lens, primarily for developmental purposes. However it may also be used as not only a primer for anyone newly involved in the developmental process, but as an updated reference to the current design model. API-related investigations are irrelevant here.
 </p>
 <p>
   Design decisions may change with solution iterations, and so there will consequently occur changes & updates to this document, with a revision history kept in the appendices.
@@ -170,11 +170,9 @@ Here we will discuss the features we plan on covering in this or later versions 
 > - [Login](#uc-login)
 > - [Create Account](#uc-create_account)
 
-Here we follow a use case template to detail several different use cases within RCSP. The use cases are described below, and we go into detail in their respective sections.
-
-
-Gregory Muthu
-516-364-5151
+<p>
+  Here we follow a use case template to detail several different use cases within RCSP. The use cases are described below, and we go into detail in their respective sections.
+</p>
 
 <table>
   <tr>
@@ -211,6 +209,11 @@ Gregory Muthu
 
   <tr>
     <td>Priority</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Modules Used</td>
     <td></td>
   </tr>
 
@@ -278,7 +281,6 @@ Gregory Muthu
 ## 3. Design Overview
 > - [Design Phases](#do-design_phases)
 > - [Guiding Principles](#do-guiding_principles)
-> - [Design Patterns](#do-design_patterns)
 > - [Coding Style](#do-coding_style)
 
 ---
@@ -293,27 +295,21 @@ Gregory Muthu
 
 ---
 
-<a name="do-design_patterns"></a>
-- 3.3 Design Patterns
-
----
-
 <a name="do-coding_style"></a>
-- 3.4 Coding Style
+- 3.3 Coding Style
 
 ---
 
 <a name="user_interface_design"></a>
 ## 4. User Interface Design
-> - [Prototypes](#uid-prototypes)
+> - [Prototypes Interfaces](#uid-prototypes)
 > - [Justifications](#uid-justifications)
-> - [Tradeoffs](#uid-perceived_tradeoffs)
 > - [Discussion](#uid-discussion)
 
 ---
 
 <a name="uid-prototypes"></a>
-- 4.1 Prototypes
+- 4.1 Prototype Interfaces
 
 ---
 
@@ -322,69 +318,39 @@ Gregory Muthu
 
 ---
 
-<a name="uid-perceived_tradeoffs"></a>
-- 4.3 Tradeoffs
-
----
-
 <a name="uid-discussion"></a>
-- 4.4 Discussion
+- 4.3 Discussion
 
 ---
 
-<a name="arch_and_comp_design"></a>
-## 5. Architectural & Components Design
-> - [MVC](#acd-mvc)
-> - [Components](#acd-components)
-> - [Hosts](#acd-hosts)
-> - [Discussion](#acd-discussion)
+<a name="components"></a>
+## 5. Components
+> - [Frontend](#components-frontend)
+> - [Backend](#components-backend)
+> - [Discussion](#components-discussion)
 
 ---
 
-<a name="acd-mvc"></a>
-- 5.1 MVC
-
-> - [Model](#acd-mvc-model)
-> - [View](#acd-mvc-view)
-> - [Controller](#acd-mvc-controller)
+<a name="components-frontend"></a>
+- 5.1 Frontend
 
 ---
 
-<a name="acd-mvc-model"></a>
-- 5.1.1 <i>Model</i>
+<a name="components-backend"></a>
+- 5.2 Backend
 
 ---
 
-<a name="acd-mvc-view"></a>
-- 5.1.2 <i>View</i>
-
----
-
-<a name="acd-mvc-controller"></a>
-- 5.1.3 <i>Controller</i>
-
----
-
-<a name="acd-components"></a>
-- 5.2 Components
-
----
-
-<a name="acd-hosts"></a>
-- 5.3 Hosts
-
----
-
-<a name="acd-discussion"></a>
-- 5.4 Discussion
+<a name="components-discussion"></a>
+- 5.3 Discussion
 
 ---
 
 <a name="data_model"></a>
 ## 6. Data Model
 > - [Prototype Tables](#dm-prototype_tables)
-> - [JSON Specification](#dm-json_spec)
-> - [Database Specification](#dm-database_spec)
+> - [JSON Specifications](#dm-json_spec)
+> - [Database Specifications](#dm-database_spec)
 > - [Discussion](#dm-discussion)
 
 ---
@@ -392,15 +358,27 @@ Gregory Muthu
 <a name="dm-prototype_tables"></a>
 - 6.1 Prototype Tables
 
+<p>
+  Compiled diagrams containing mock tables from all of our modules will be shared below.
+</p>
+
 ---
 
 <a name="dm-json_spec"></a>
 - 6.2 JSON Specification
 
+<p>
+  A JSON specification which is shared among all of the modules contained within and used by RCSP will be outlined below.
+</p>
+
 ---
 
 <a name="dm-database_spec"></a>
 - 6.3 Database Specification
+
+<p>
+  For now, a single database host will be used to store all of the data possessed by RCSP. A detailed view of how all the modules will store data will be shown below.
+</p>
 
 ---
 
